@@ -1,7 +1,7 @@
 {
-  "name": "NodeWarden",
-  "short_name": "NodeWarden",
-  "description": "A lightweight Bitwarden-compatible vault for Cloudflare Workers.",
+  "name": "Celare",
+  "short_name": "Celare",
+  "description": "Your passwords, kept secret and in sync.",
   "id": "/",
   "start_url": "/vault",
   "scope": "/",

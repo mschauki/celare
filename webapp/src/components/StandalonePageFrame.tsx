@@ -12,9 +12,9 @@ export default function StandalonePageFrame(props: StandalonePageFrameProps) {
   return (
     <div className="standalone-shell">
       <div className="standalone-brand standalone-brand-outside">
-        <img src="/nodewarden-logo.svg" alt="NodeWarden logo" className="standalone-brand-logo" />
+        <img src="/nodewarden-logo.svg" alt="Celare logo" className="standalone-brand-logo" />
         <div>
-          <span className="standalone-brand-wordmark" role="img" aria-label="NodeWarden" />
+          <span className="standalone-brand-wordmark" role="img" aria-label="Celare" />
         </div>
       </div>
 
@@ -28,12 +28,12 @@ export default function StandalonePageFrame(props: StandalonePageFrameProps) {
       </div>
 
       <div className="standalone-footer">
-        <a href="https://github.com/shuaiplus/NodeWarden" target="_blank" rel="noreferrer">NodeWarden Repository</a>
+        <span>Celare by Schauki</span>
         <span> | </span>
-        <a href="https://github.com/shuaiplus" target="_blank" rel="noreferrer">Author: @shuaiplus</a>
+        <a href="https://github.com/mschauki/celare" target="_blank" rel="noreferrer">Open source</a>
         <span> | </span>
         <a
-          href="https://github.com/shuaiplus/NodeWarden/releases/latest"
+          href="https://github.com/mschauki/celare"
           target="_blank"
           rel="noreferrer"
           className="standalone-version"
