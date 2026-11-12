@@ -642,11 +642,11 @@ export default function SettingsPage(props: SettingsPageProps) {
                 <div className="settings-vertical-fields">
                   <label className="field">
                     <span>{t('txt_new_password')}</span>
-                    <input className="input" type="password" value={newPassword} onInput={(e) => setNewPassword((e.currentTarget as HTMLInputElement).value)} />
+                    <input className="input" type="password" autoComplete="new-password" value={newPassword} onInput={(e) => setNewPassword((e.currentTarget as HTMLInputElement).value)} />
                   </label>
                   <label className="field">
                     <span>{t('txt_confirm_password')}</span>
-                    <input className="input" type="password" value={newPassword2} onInput={(e) => setNewPassword2((e.currentTarget as HTMLInputElement).value)} />
+                    <input className="input" type="password" autoComplete="new-password" value={newPassword2} onInput={(e) => setNewPassword2((e.currentTarget as HTMLInputElement).value)} />
                   </label>
                 </div>
                 <button

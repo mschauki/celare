@@ -437,7 +437,7 @@ export async function registerAccount(args: {
   try {
     const { email, name, password, masterPasswordHint, inviteCode, fallbackIterations } = args;
     const webCrypto = requireWebCrypto();
-    const masterKey = await pbkdf2(password, email, fallbackIterations, 32);
+    const masterKey = await pbkdf2(password, email.trim().toLowerCase(), fallbackIterations, 32);
     const masterHash = await pbkdf2(masterKey, password, 1, 32);
     const encKey = await hkdfExpand(masterKey, 'enc', 32);
     const macKey = await hkdfExpand(masterKey, 'mac', 32);
@@ -631,7 +631,7 @@ export async function changeMasterPassword(
   if (userSym.length !== 64) {
     throw new Error('Invalid profile key');
   }
-  const nextMasterKey = await pbkdf2(args.newPassword, args.email, current.kdfIterations, 32);
+  const nextMasterKey = await pbkdf2(args.newPassword, args.email.trim().toLowerCase(), current.kdfIterations, 32);
   const nextHash = await pbkdf2(nextMasterKey, args.newPassword, 1, 32);
   const nextEnc = await hkdfExpand(nextMasterKey, 'enc', 32);
   const nextMac = await hkdfExpand(nextMasterKey, 'mac', 32);
